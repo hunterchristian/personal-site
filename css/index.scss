@@ -1,0 +1,69 @@
+
+@import "_fonts.scss";
+@import "_utils.scss";
+
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  background-color: #000000;
+}
+
+.aboveFold {
+  @include fullScreen();
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.45),
+    rgba(0, 0, 0, 0.45)
+  ),
+  url('assets/ireland.jpg');
+  background-size: cover;
+  background-position: right;
+
+
+  .whoIam {
+    font-family: 'Oxygen', sans-serif;
+    font-size: 50px;
+    color: #FFFFFF;
+    text-align: center;
+    position: absolute;
+    top: 30%;
+    width: 100%;
+
+    @include fadeIn(1s, 2.0s);
+  }
+
+  img.beckon {
+    position: absolute;
+    right: 210px;
+    bottom: 0px;
+
+    @include fadeIn(4.5s, 1s);
+  }
+
+  div.beckon {
+    position: absolute;
+    right: 150px;
+    bottom: 125px;
+    font-family: 'Pastel Crayon', serif;
+    font-size: 26px;
+    color: #FFFFFF;
+    transform: rotate(10deg);
+
+    @include fadeIn(3.5s, 1s);
+  }
+}
+
+.sect1 {
+  @include fullScreen();
+  background-color: #E3A36F;
+}
+
+.sect2 {
+  @include fullScreen();
+  background-color: #75E36F;
+}
+
+.sect3 {
+  @include fullScreen();
+  background-color: #DD6FE3;
+}
