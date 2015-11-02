@@ -5,21 +5,61 @@
     <title></title>
     <link rel="stylesheet" href="styles.css"/>
     <link href='http://fonts.googleapis.com/css?family=Oxygen:700' rel='stylesheet' type='text/css'>
+    <script data-main="js/app/main" src="js/third_party/require.js" type="text/javascript"></script>
 </head>
 <body>
-    <div class="aboveFold">
-        <div class="whoIam fade-in">SOFTWARE ENGINEER.</div>
-        <div class="beckon">My Journey</div>
-        <img class="beckon" src="assets/arrow2_crayon.png" alt=""/>
+<div class="aboveFold">
+    <div class="who-I-am fade-in">SOFTWARE ENGINEER</div>
+    <img class="social-icon github" src="assets/images/github.png" alt=""/>
+    <div class="social-icon github-description">What I do</div>
+    <img class="social-icon linkedin" src="assets/images/linkedin-logo.png" alt=""/>
+    <div class="social-icon linkedin-description">What I know</div>
+    <img class="social-icon twitter" src="assets/images/twitter.png" alt=""/>
+    <div class="social-icon twitter-description">What I say</div>
+    <div class="beckon">Keep going!</div>
+    <img class="beckon" src="assets/images/arrow2_crayon.png" alt=""/>
+</div>
+<div class="sect1"></div>
+<div class="sect2">
+    Section 2
+</div>
+<div class="sect3">
+    Section 3
+</div>
+
+<script id="sect1_template" type="text/ractive">
+    <div class="amazon-music-logo-wrapper">
+        <img class="amazon-logo" src="assets/images/amazon-logo.png" height="120" alt=""/>
+        <equalizer active=true animate=true size=2 />
+        <img class="music-logo" src="assets/images/music-logo.png" height="77" alt=""/>
     </div>
-    <div class="sect1">
-        Section 1
-    </div>
-    <div class="sect2">
-        Section 2
-    </div>
-    <div class="sect3">
-        Section 3
-    </div>
+    <div class="amazon-description">I work on making <img class="inline-amazon-logo" src="assets/images/amazon-logo.png" alt=""/> a key player in the music industry</div>
+</script>
+
+<script id="equalizer_ractive_template" type="text/html">
+    <svg class="equalizer" height="30" width="30">
+        <g>
+            <rect width="{{w}}" height="{{h}}" x="{{x1}}" y="{{y6}}" class="eqRow r11" />
+            <rect width="{{w}}" height="{{h}}" x="{{x2}}" y="{{y6}}" class="eqRow r12" />
+            <rect width="{{w}}" height="{{h}}" x="{{x3}}" y="{{y6}}" class="eqRow r13" />
+            <rect width="{{w}}" height="{{h}}" x="{{x1}}" y="{{y5}}" class="eqRow r21" />
+            <rect width="{{w}}" height="{{h}}" x="{{x2}}" y="{{y5}}" class="eqRow r22" />
+            <rect width="{{w}}" height="{{h}}" x="{{x3}}" y="{{y5}}" class="eqRow r23" />
+            <rect width="{{w}}" height="{{h}}" x="{{x1}}" y="{{y4}}" class="eqRow r31" />
+            <rect width="{{w}}" height="{{h}}" x="{{x2}}" y="{{y4}}" class="eqRow r32" />
+            <rect width="{{w}}" height="{{h}}" x="{{x3}}" y="{{y4}}" class="eqRow r33" />
+            <rect width="{{w}}" height="{{h}}" x="{{x1}}" y="{{y3}}" class="eqRow r41" />
+            <rect width="{{w}}" height="{{h}}" x="{{x2}}" y="{{y3}}" class="eqRow r42" />
+            <rect width="{{w}}" height="{{h}}" x="{{x3}}" y="{{y3}}" class="eqRow r43" />
+            <rect width="{{w}}" height="{{h}}" x="{{x1}}" y="{{y2}}" class="eqRow r51" />
+            <rect width="{{w}}" height="{{h}}" x="{{x2}}" y="{{y2}}" class="eqRow r52" />
+            <rect width="{{w}}" height="{{h}}" x="{{x3}}" y="{{y2}}" class="eqRow r53" />
+            <rect width="{{w}}" height="{{h}}" x="{{x1}}" y="{{y1}}" class="eqRow r61" />
+            <rect width="{{w}}" height="{{h}}" x="{{x2}}" y="{{y1}}" class="eqRow r62" />
+            <rect width="{{w}}" height="{{h}}" x="{{x3}}" y="{{y1}}" class="eqRow r63" />
+        </g>
+    </svg>
+</script>
+
 </body>
 </html>

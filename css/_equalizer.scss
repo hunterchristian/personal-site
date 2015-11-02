@@ -1,0 +1,11 @@
+.equalizer {
+  rect {
+    opacity: 1;
+    fill: $amazonOrange;
+    @include transition(opacity, .1);
+  }
+
+  .fadeout {
+    opacity: 0;
+  }
+}

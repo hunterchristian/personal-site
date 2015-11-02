@@ -8,7 +8,8 @@ module.exports = function(grunt) {
             main: {
                 files: [
                     {expand: true, src: ['index.html'], dest: '../dist/'},
-                    {expand: true, src: ['assets/*'], dest: '../dist/'}
+                    {expand: true, src: ['assets/**/*'], dest: '../dist/'},
+                    {expand: true, src: ['js/**/*'], dest: '../dist/'}
                 ]
             }
         },
@@ -33,4 +34,4 @@ module.exports = function(grunt) {
 
     grunt.registerTask('build', ['sass', 'copy']);
     grunt.registerTask('default',['watch']);
-}
+};
