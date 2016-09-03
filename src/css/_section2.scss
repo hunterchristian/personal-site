@@ -1,0 +1,40 @@
+.sect2 {
+    @include fullScreen();
+    background-color: white;
+    position: absolute;
+    text-align: center;
+
+    .amazon-music-logo-wrapper {
+        @include verticalCenter();
+        @include horizontalCenter();
+    }
+
+    .music-logo {
+        font-family: Officina Sans Book;
+        font-size: 83px;
+        margin-bottom: 61px;
+    }
+
+    .inline-amazon-logo {
+        @include transform(translateY(18.5px));
+        width: 95px;
+    }
+
+    .amazon-description {
+        @include verticalCenter();
+        color: $steelyGrey;
+        top: 25%;
+        margin-left: 30%;
+        margin-right: 30%;
+        font-family: Officina Sans Bold;
+        font-size: 30px;
+    }
+
+    .equalizer {
+        top: 0px;
+        position: absolute;
+        width: 160px;
+        height: 160px;
+        padding: 75px 61px;
+    }
+}

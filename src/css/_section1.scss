@@ -1,0 +1,57 @@
+.sect1 {
+    @include fullScreen();
+    background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('assets/images/ireland.jpg');
+    background-size: cover;
+    background-position: right;
+
+    .social-icon {
+        position: absolute;
+        margin-top: 5%;
+
+        &.github {
+            left: 30%;
+            @include fadeUp(2.5s, 0.5s);
+        }
+
+        &.github-description {
+            left: 26.5%;
+            margin-top: 30%;
+            font-family: 'Pastel Crayon', serif;
+            font-size: 26px;
+            color: $pureWhite;
+        }
+
+        &.linkedin {
+            left: 48%;
+            @include fadeUp(2.7s, 0.5s);
+        }
+
+        &.linkedin-description {
+            left: 43.5%;
+            margin-top: 30%;
+            font-family: 'Pastel Crayon', serif;
+            font-size: 26px;
+            color: $pureWhite;
+        }
+
+        &.twitter {
+            left: 67%;
+            @include fadeUp(2.9s, 0.5s);
+        }
+
+        &.twitter-description {
+            left: 63%;
+            margin-top: 30%;
+            font-family: 'Pastel Crayon', serif;
+            font-size: 26px;
+            color: $pureWhite;
+        }
+    }
+
+    .beckon {
+        position: absolute;
+        right: 6%;
+        bottom: 5%;
+        @include fadeIn(4.5s, 1s);
+    }
+}

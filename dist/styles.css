@@ -1,0 +1,299 @@
+.equalizer rect {
+  opacity: 1;
+  fill: #ff9900;
+  -webkit-transition: opacity, 0.1;
+  transition: opacity, 0.1; }
+.equalizer .fadeout {
+  opacity: 0; }
+
+@font-face {
+  font-family: 'Pastel Crayon';
+  src: url("assets/fonts/pastel_crayon.ttf"); }
+@font-face {
+  font-family: 'Officina Sans Bold';
+  src: url("assets/fonts/itc-officina-sans-lt-bold.ttf"); }
+@font-face {
+  font-family: 'Officina Sans Book';
+  src: url("assets/fonts/itc-officina-sans-lt-book.ttf"); }
+.sect1 {
+  height: 95%;
+  width: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("assets/images/ireland.jpg");
+  background-size: cover;
+  background-position: right; }
+  .sect1 .social-icon {
+    position: absolute;
+    margin-top: 5%; }
+    .sect1 .social-icon.github {
+      left: 30%;
+      /* make keyframes that tell the start state and the end state of our object */
+      opacity: 0;
+      /* make things invisible upon start */
+      top: 40%;
+      -webkit-animation: fadeUp ease-in 1;
+      /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+      -moz-animation: fadeUp ease-in 1;
+      animation: fadeUp ease-in 1;
+      -webkit-animation-fill-mode: forwards;
+      /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+      -moz-animation-fill-mode: forwards;
+      animation-fill-mode: forwards;
+      -webkit-animation-duration: 0.5s;
+      -moz-animation-duration: 0.5s;
+      animation-duration: 0.5s;
+      -webkit-animation-delay: 2.5s;
+      -moz-animation-delay: 2.5s;
+      animation-delay: 2.5s; }
+@-webkit-keyframes fadeUp {
+  0% {
+    opacity: 0;
+    top: 43%; }
+  20% {
+    opacity: 1;
+    top: 38%; }
+  60% {
+    opacity: 1;
+    top: 41%; }
+  100% {
+    opacity: 1;
+    top: 40%; } }
+@-moz-keyframes fadeUp {
+  0% {
+    opacity: 0;
+    top: 45%; }
+  20% {
+    opacity: 1;
+    top: 38%; }
+  100% {
+    opacity: 1;
+    top: 40%; } }
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    top: 45%; }
+  20% {
+    opacity: 1;
+    top: 38%; }
+  100% {
+    opacity: 1;
+    top: 40%; } }
+    .sect1 .social-icon.github-description {
+      left: 26.5%;
+      margin-top: 30%;
+      font-family: 'Pastel Crayon', serif;
+      font-size: 26px;
+      color: #FFFFFF; }
+    .sect1 .social-icon.linkedin {
+      left: 48%;
+      /* make keyframes that tell the start state and the end state of our object */
+      opacity: 0;
+      /* make things invisible upon start */
+      top: 40%;
+      -webkit-animation: fadeUp ease-in 1;
+      /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+      -moz-animation: fadeUp ease-in 1;
+      animation: fadeUp ease-in 1;
+      -webkit-animation-fill-mode: forwards;
+      /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+      -moz-animation-fill-mode: forwards;
+      animation-fill-mode: forwards;
+      -webkit-animation-duration: 0.5s;
+      -moz-animation-duration: 0.5s;
+      animation-duration: 0.5s;
+      -webkit-animation-delay: 2.7s;
+      -moz-animation-delay: 2.7s;
+      animation-delay: 2.7s; }
+@-webkit-keyframes fadeUp {
+  0% {
+    opacity: 0;
+    top: 43%; }
+  20% {
+    opacity: 1;
+    top: 38%; }
+  60% {
+    opacity: 1;
+    top: 41%; }
+  100% {
+    opacity: 1;
+    top: 40%; } }
+@-moz-keyframes fadeUp {
+  0% {
+    opacity: 0;
+    top: 45%; }
+  20% {
+    opacity: 1;
+    top: 38%; }
+  100% {
+    opacity: 1;
+    top: 40%; } }
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    top: 45%; }
+  20% {
+    opacity: 1;
+    top: 38%; }
+  100% {
+    opacity: 1;
+    top: 40%; } }
+    .sect1 .social-icon.linkedin-description {
+      left: 43.5%;
+      margin-top: 30%;
+      font-family: 'Pastel Crayon', serif;
+      font-size: 26px;
+      color: #FFFFFF; }
+    .sect1 .social-icon.twitter {
+      left: 67%;
+      /* make keyframes that tell the start state and the end state of our object */
+      opacity: 0;
+      /* make things invisible upon start */
+      top: 40%;
+      -webkit-animation: fadeUp ease-in 1;
+      /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+      -moz-animation: fadeUp ease-in 1;
+      animation: fadeUp ease-in 1;
+      -webkit-animation-fill-mode: forwards;
+      /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+      -moz-animation-fill-mode: forwards;
+      animation-fill-mode: forwards;
+      -webkit-animation-duration: 0.5s;
+      -moz-animation-duration: 0.5s;
+      animation-duration: 0.5s;
+      -webkit-animation-delay: 2.9s;
+      -moz-animation-delay: 2.9s;
+      animation-delay: 2.9s; }
+@-webkit-keyframes fadeUp {
+  0% {
+    opacity: 0;
+    top: 43%; }
+  20% {
+    opacity: 1;
+    top: 38%; }
+  60% {
+    opacity: 1;
+    top: 41%; }
+  100% {
+    opacity: 1;
+    top: 40%; } }
+@-moz-keyframes fadeUp {
+  0% {
+    opacity: 0;
+    top: 45%; }
+  20% {
+    opacity: 1;
+    top: 38%; }
+  100% {
+    opacity: 1;
+    top: 40%; } }
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    top: 45%; }
+  20% {
+    opacity: 1;
+    top: 38%; }
+  100% {
+    opacity: 1;
+    top: 40%; } }
+    .sect1 .social-icon.twitter-description {
+      left: 63%;
+      margin-top: 30%;
+      font-family: 'Pastel Crayon', serif;
+      font-size: 26px;
+      color: #FFFFFF; }
+  .sect1 .beckon {
+    position: absolute;
+    right: 6%;
+    bottom: 5%;
+    /* make keyframes that tell the start state and the end state of our object */
+    opacity: 0;
+    /* make things invisible upon start */
+    -webkit-animation: fadeIn ease-in 1;
+    /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+    -moz-animation: fadeIn ease-in 1;
+    animation: fadeIn ease-in 1;
+    -webkit-animation-fill-mode: forwards;
+    /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+    -moz-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-delay: 4.5s;
+    -moz-animation-delay: 4.5s;
+    animation-delay: 4.5s; }
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+@-moz-keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+@keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+.sect2 {
+  height: 95%;
+  width: 100%;
+  background-color: white;
+  position: absolute;
+  text-align: center; }
+  .sect2 .amazon-music-logo-wrapper {
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    position: absolute;
+    left: 50%; }
+  .sect2 .music-logo {
+    font-family: Officina Sans Book;
+    font-size: 83px;
+    margin-bottom: 61px; }
+  .sect2 .inline-amazon-logo {
+    -webkit-transform: translateY(18.5px);
+    -moz-transform: translateY(18.5px);
+    -o-transform: translateY(18.5px);
+    -ms-transform: translateY(18.5px);
+    transform: translateY(18.5px);
+    width: 95px; }
+  .sect2 .amazon-description {
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    position: absolute;
+    top: 50%;
+    color: #696969;
+    top: 25%;
+    margin-left: 30%;
+    margin-right: 30%;
+    font-family: Officina Sans Bold;
+    font-size: 30px; }
+  .sect2 .equalizer {
+    top: 0px;
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    padding: 75px 61px; }
+
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  background-color: #000000; }
+
+/*# sourceMappingURL=styles.css.map */
