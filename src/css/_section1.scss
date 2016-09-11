@@ -4,54 +4,62 @@
     background-size: cover;
     background-position: right;
 
-    .social-icon {
-        position: absolute;
-        margin-top: 5%;
+    .socialIconContainer {
+        width: 20%;
+        min-width: 275px;
+        text-align: center;
+        @include verticalCenter();
+        @include horizontalCenter();
 
-        &.github {
-            left: 30%;
-            @include fadeUp(2.5s, 0.5s);
-        }
+        .social-icon {
+            margin-left: 5%;
+            margin-right: 5%;
 
-        &.github-description {
-            left: 26.5%;
-            margin-top: 30%;
-            font-family: 'Pastel Crayon', serif;
-            font-size: 26px;
-            color: $pureWhite;
-        }
+            &.github {
+                left: 30%;
+                @include fadeIn(2.5s, 0.5s);
+            }
 
-        &.linkedin {
-            left: 48%;
-            @include fadeUp(2.7s, 0.5s);
-        }
+            &.github-description {
+                left: 26.5%;
+                margin-top: 30%;
+                font-family: 'Pastel Crayon', serif;
+                font-size: 26px;
+                color: $pureWhite;
+            }
 
-        &.linkedin-description {
-            left: 43.5%;
-            margin-top: 30%;
-            font-family: 'Pastel Crayon', serif;
-            font-size: 26px;
-            color: $pureWhite;
-        }
+            &.linkedin {
+                left: 48%;
+                @include fadeIn(2.7s, 0.5s);
+            }
 
-        &.twitter {
-            left: 67%;
-            @include fadeUp(2.9s, 0.5s);
-        }
+            &.linkedin-description {
+                left: 43.5%;
+                margin-top: 30%;
+                font-family: 'Pastel Crayon', serif;
+                font-size: 26px;
+                color: $pureWhite;
+            }
 
-        &.twitter-description {
-            left: 63%;
-            margin-top: 30%;
-            font-family: 'Pastel Crayon', serif;
-            font-size: 26px;
-            color: $pureWhite;
+            &.twitter {
+                left: 67%;
+                @include fadeIn(2.9s, 0.5s);
+            }
+
+            &.twitter-description {
+                left: 63%;
+                margin-top: 30%;
+                font-family: 'Pastel Crayon', serif;
+                font-size: 26px;
+                color: $pureWhite;
+            }
         }
     }
 
-    .beckon {
+    /*.beckon {
         position: absolute;
         right: 6%;
         bottom: 5%;
         @include fadeIn(4.5s, 1s);
-    }
+    }*/
 }
