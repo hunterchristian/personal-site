@@ -8,7 +8,8 @@ module.exports = function(grunt) {
             main: {
                 files: [
                     {expand: true, cwd: 'src/', src: ['index.html'], dest: 'dist/'},
-                    {expand: true, cwd: 'src/', src: ['assets/**/*'], dest: 'dist/'}
+                    {expand: true, cwd: 'src/', src: ['assets/**/*'], dest: 'dist/'},
+                    {expand: true, cwd: 'src/', src: ['html/**/*'], dest: 'dist/'}
                 ]
             }
         },
@@ -24,6 +25,27 @@ module.exports = function(grunt) {
                 files: ['src/**/*.scss', 'src/**/*.js', 'src/**/*.html', 'src/*.html'],
                 tasks: ['build']
             }
+        },
+        webpack: {
+            build: {
+                entry: './src/js/main.js',
+                output: {
+                    path: './dist',
+                    filename: 'app.bundle.js'
+                },
+                module: {
+                    loaders: [
+                        {
+                            test: /\.html$/,
+                            loader: 'ractive'
+                        },
+                        {
+                            test: path.join(__dirname, 'src'),
+                            loader: 'babel-loader'
+                        }
+                    ]
+                }
+            }
         }
     });
 
@@ -32,6 +54,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-webpack');
 
-    grunt.registerTask('build', ['sass', 'copy']);
+    grunt.registerTask('build', ['sass', 'copy', 'webpack:build']);
     grunt.registerTask('default',['watch']);
 };

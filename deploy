@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# Log into the server which serves my website
+
+echo "*******************************"
+echo "**** deploying website... *****"
+echo "*******************************"
+
+sftp -b /dev/stdin hunterhod@104.236.130.185 <<STOP
+cd /var/www/hunterhodnett.com/html
+lcd ./dist
+put -r assets
+put app.bundle.js
+put index.html
+put styles.css
+exit
+STOP
+
+echo "******************************"
+echo "**** deployment complete  ****"
+echo "******************************"
