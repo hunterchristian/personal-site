@@ -70,3 +70,23 @@
         text-decoration: none;
     }
 }
+
+@include respondTo(handhelds) {
+    .sect1 {
+        .jobTitle {
+            top: 15%;
+            font-size: 85px;
+        }
+
+        .socialIconContainer {
+            top: 27%;
+            width: 60%;
+
+            .social-icon {
+                width: 75px;
+                margin-left: 10%;
+                margin-right: 10%;
+            }
+        }
+    }
+}

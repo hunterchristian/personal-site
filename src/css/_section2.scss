@@ -62,11 +62,6 @@
         margin-bottom: 61px;
     }
 
-    .inline-amazon-logo {
-        @include transform(translateY(18.5px));
-        width: 95px;
-    }
-
     .amazon-description {
         @include verticalCenter();
         color: $steelyGrey;
@@ -75,5 +70,48 @@
         margin-right: 30%;
         font-family: Officina Sans Bold;
         font-size: 30px;
+
+        .inline-amazon-logo {
+            @include transform(translateY(18.5px));
+            width: 95px;
+        }
+    }
+}
+
+@include respondTo(handhelds) {
+    .sect2 {
+        top: 25px;
+
+        &.pageLoaded {
+            top: -150px;
+        }
+
+        &:before {
+            background-size: 50px 100px;
+        }
+
+        &.zigzag:before {
+            top: -25px;
+            height: 30px;
+        }
+
+        .amazon-music-logo-wrapper {
+            width: 100%;
+
+            .equalizer {
+                right: 29%;
+            }
+        }
+
+        .amazon-description {
+            font-size: 60px;
+            margin-left: 15%;
+            margin-right: 15%;
+
+            .inline-amazon-logo {
+                @include transform(translateY(35px));
+                width: 180px;
+            }
+        }
     }
 }

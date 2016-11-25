@@ -1,5 +1,3 @@
-$sectionHeight: 95%;
-
 @mixin fullScreen() {
   height: $sectionHeight;
   width: 100%;
@@ -97,4 +95,27 @@ $sectionHeight: 95%;
   -ms-transition: $transition;
   -o-transition: $transition;
   transition: $transition;
+}
+
+@mixin respondTo($media) {
+  @if $media == handhelds {
+    @media only screen
+      and (max-device-width: $handheldBreakpoint - 1) {
+        @content;
+    }
+  }
+  @else if $media == wide-handhelds {
+    @media only screen
+      and (min-device-width: $handheldBreakpoint)
+      and (max-device-width: $wideHandheldBreakpoint - 1) {
+        @content;
+    }
+  }
+  @else if $media == tablets {
+    @media only screen
+      and (min-device-width: $wideHandheldBreakpoint)
+      and (max-device-width: $tabletBreakpoint - 1) {
+        @content;
+    }
+  }
 }

@@ -201,6 +201,17 @@
   .sect1 a {
     text-decoration: none; }
 
+@media only screen and (max-device-width: 479px) {
+  .sect1 .jobTitle {
+    top: 15%;
+    font-size: 85px; }
+  .sect1 .socialIconContainer {
+    top: 27%;
+    width: 60%; }
+    .sect1 .socialIconContainer .social-icon {
+      width: 75px;
+      margin-left: 10%;
+      margin-right: 10%; } }
 .sect2 {
   height: 95%;
   width: 100%;
@@ -253,13 +264,6 @@
     font-family: Officina Sans Book;
     font-size: 83px;
     margin-bottom: 61px; }
-  .sect2 .inline-amazon-logo {
-    -webkit-transform: translateY(18.5px);
-    -moz-transform: translateY(18.5px);
-    -o-transform: translateY(18.5px);
-    -ms-transform: translateY(18.5px);
-    transform: translateY(18.5px);
-    width: 95px; }
   .sect2 .amazon-description {
     -webkit-transform: translateY(-50%);
     -moz-transform: translateY(-50%);
@@ -274,7 +278,39 @@
     margin-right: 30%;
     font-family: Officina Sans Bold;
     font-size: 30px; }
+    .sect2 .amazon-description .inline-amazon-logo {
+      -webkit-transform: translateY(18.5px);
+      -moz-transform: translateY(18.5px);
+      -o-transform: translateY(18.5px);
+      -ms-transform: translateY(18.5px);
+      transform: translateY(18.5px);
+      width: 95px; }
 
+@media only screen and (max-device-width: 479px) {
+  .sect2 {
+    top: 25px; }
+    .sect2.pageLoaded {
+      top: -150px; }
+    .sect2:before {
+      background-size: 50px 100px; }
+    .sect2.zigzag:before {
+      top: -25px;
+      height: 30px; }
+    .sect2 .amazon-music-logo-wrapper {
+      width: 100%; }
+      .sect2 .amazon-music-logo-wrapper .equalizer {
+        right: 29%; }
+    .sect2 .amazon-description {
+      font-size: 60px;
+      margin-left: 15%;
+      margin-right: 15%; }
+      .sect2 .amazon-description .inline-amazon-logo {
+        -webkit-transform: translateY(35px);
+        -moz-transform: translateY(35px);
+        -o-transform: translateY(35px);
+        -ms-transform: translateY(35px);
+        transform: translateY(35px);
+        width: 180px; } }
 .equalizer .eqRow {
   opacity: 1;
   fill: #ff9900;
