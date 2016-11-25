@@ -13,6 +13,7 @@ put -r assets
 put app.bundle.js
 put index.html
 put styles.css
+put favicon.ico
 exit
 STOP
 

@@ -9,7 +9,8 @@ module.exports = function(grunt) {
                 files: [
                     {expand: true, cwd: 'src/', src: ['index.html'], dest: 'dist/'},
                     {expand: true, cwd: 'src/', src: ['assets/**/*'], dest: 'dist/'},
-                    {expand: true, cwd: 'src/', src: ['html/**/*'], dest: 'dist/'}
+                    {expand: true, cwd: 'src/', src: ['html/**/*'], dest: 'dist/'},
+                    {expand: true, cwd: 'src/', src: ['favicon.ico'], dest: 'dist/'}
                 ]
             }
         },
