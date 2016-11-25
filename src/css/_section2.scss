@@ -2,7 +2,44 @@
     @include fullScreen();
     background-color: white;
     position: absolute;
+    top: 10px;
     text-align: center;
+
+    // Zig-zag border
+    &:before {
+        background:
+            linear-gradient(
+                45deg, transparent 33.333%,
+                #FFF 33.333%, #FFF 66.667%,
+                transparent 66.667%
+            ),
+            linear-gradient(
+                -45deg, transparent 33.333%,
+                #FFF 33.333%, #FFF 66.667%,
+                transparent 66.667%
+            );
+        background-size: 20px 40px;
+    }
+
+    &.zigzag {
+        position: relative;
+        width: 100%;
+
+        &:before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: -10px;
+            width: 100%;
+            height: 10px;
+        }
+    }
+
+    // Let the user know that there is content below the fold
+    &.pageLoaded {
+        @include transition(top 0.5s);
+        top: -25px;
+    }
 
     .amazon-music-logo-wrapper {
         @include verticalCenter();

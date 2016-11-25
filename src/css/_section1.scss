@@ -1,5 +1,6 @@
 .sect1 {
-    @include fullScreen();
+    height: 100%;
+    width: 100%;
     background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('assets/images/ireland.jpg');
     background-size: cover;
     background-position: right;

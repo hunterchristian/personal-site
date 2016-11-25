@@ -6,6 +6,8 @@ import Equalizer from './components/Equalizer';
 
 Ractive.components.equalizer = Equalizer;
 
+const SHOW_CONTENT_BELOW_FOLD_DELAY_MILLIS = 2500;
+
 const ractive = new Ractive({
     el: '.sect2',
     template: '#sect2_template',
@@ -18,6 +20,9 @@ const ractive = new Ractive({
      */
     oninit: function () {
         window.addEventListener('scroll', this.onscroll.bind(this));
+        window.setTimeout(function () {
+            this.el.classList.add('pageLoaded');
+        }.bind(this), SHOW_CONTENT_BELOW_FOLD_DELAY_MILLIS);
     },
 
     /**
