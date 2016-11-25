@@ -1,11 +1,11 @@
 .equalizer {
-  rect {
-    opacity: 1;
-    fill: $amazonOrange;
-    @include transition(opacity, .1);
-  }
+    .eqRow {
+        opacity: 1;
+        fill: $amazonOrange;
+        @include transition(opacity, .1);
 
-  .fadeout {
-    opacity: 0;
-  }
+        &.fadeout {
+            opacity: 0;
+        }
+    }
 }

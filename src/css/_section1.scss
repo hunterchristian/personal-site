@@ -4,6 +4,15 @@
     background-size: cover;
     background-position: right;
 
+    .jobTitle {
+        @include horizontalCenter();
+        @include fadeIn(0.5s, 0.5s);
+        top: 40%;
+        font-family: Officina Sans Bold;
+        font-size: 25px;
+        color: white;
+    }
+
     .socialIconContainer {
         width: 20%;
         min-width: 275px;
@@ -56,10 +65,7 @@
         }
     }
 
-    /*.beckon {
-        position: absolute;
-        right: 6%;
-        bottom: 5%;
-        @include fadeIn(4.5s, 1s);
-    }*/
+    a {
+        text-decoration: none;
+    }
 }
