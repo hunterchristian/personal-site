@@ -60,8 +60,6 @@
 
 	_ractive2.default.components.equalizer = _Equalizer2.default;
 
-	var SHOW_CONTENT_BELOW_FOLD_DELAY_MILLIS = 2500;
-
 	var ractive = new _ractive2.default({
 	    el: '.sect2',
 	    template: '#sect2_template',
@@ -74,9 +72,13 @@
 	     */
 	    oninit: function oninit() {
 	        window.addEventListener('scroll', this.onscroll.bind(this));
-	        window.setTimeout(function () {
-	            this.el.classList.add('pageLoaded');
-	        }.bind(this), SHOW_CONTENT_BELOW_FOLD_DELAY_MILLIS);
+	    },
+
+	    /**
+	     * Let the user know that the content below the fold has loaded.
+	     */
+	    oncomplete: function oncomplete() {
+	        this.el.classList.add('pageLoaded');
 	    },
 
 	    /**
