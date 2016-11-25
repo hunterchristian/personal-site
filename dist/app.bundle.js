@@ -60,6 +60,10 @@
 
 	_ractive2.default.components.equalizer = _Equalizer2.default;
 
+	var SHOW_CONTENT_BELOW_FOLD_DELAY_MILLIS = 2500;
+	// This constant needs to be kept in sync with the $sectionHeight variable in _utils.scss
+	var PERCENT_OF_VIEW_TO_PEEK = 0.06;
+
 	var ractive = new _ractive2.default({
 	    el: '.sect2',
 	    template: '#sect2_template',
@@ -78,7 +82,14 @@
 	     * Let the user know that the content below the fold has loaded.
 	     */
 	    oncomplete: function oncomplete() {
-	        this.el.classList.add('pageLoaded');
+	        var timeSinceFirstLoad = performance.now() - window.loadStartTime;
+	        if (timeSinceFirstLoad < SHOW_CONTENT_BELOW_FOLD_DELAY_MILLIS) {
+	            window.setTimeout(function () {
+	                this.el.classList.add('pageLoaded');
+	            }.bind(this), SHOW_CONTENT_BELOW_FOLD_DELAY_MILLIS - timeSinceFirstLoad);
+	        } else {
+	            this.el.classList.add('pageLoaded');
+	        }
 	    },
 
 	    /**
@@ -92,11 +103,16 @@
 	     * See if this section has scrolled into view and activate the equalizer if so.
 	     */
 	    onscroll: function onscroll() {
-	        if (this.el.getBoundingClientRect().top <= this.el.clientHeight * 0.06) {
-	            this.set('equalizerActive', true);
-	        } else {
-	            this.set('equalizerActive', false);
-	        }
+	        var lastKnownTopPosition = this.el.getBoundingClientRect().top;
+	        var heightOfThisElement = this.el.clientHeight;
+
+	        window.requestAnimationFrame(function () {
+	            if (lastKnownTopPosition <= heightOfThisElement * PERCENT_OF_VIEW_TO_PEEK) {
+	                this.set('equalizerActive', true);
+	            } else {
+	                this.set('equalizerActive', false);
+	            }
+	        }.bind(this));
 	    }
 	});
 
