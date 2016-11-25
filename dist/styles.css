@@ -39,8 +39,8 @@
     -moz-animation-delay: 0.5s;
     animation-delay: 0.5s;
     top: 40%;
-    font-family: Officina Sans Bold;
-    font-size: 25px;
+    font-family: 'Ranga', cursive;
+    font-size: 35px;
     color: white; }
 @-webkit-keyframes fadeIn {
   from {
