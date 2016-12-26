@@ -63,7 +63,32 @@
 	var SHOW_CONTENT_BELOW_FOLD_DELAY_MILLIS = 2500;
 	// This constant needs to be kept in sync with the $sectionHeight variable in _utils.scss
 	var PERCENT_OF_VIEW_TO_PEEK = 0.06;
-	var DISTANCE_MODIFIER = 0.65;
+	var BACKGROUND_DISTANCE_MODIFIER = 0.65;
+	var NAME_TITLE_DISTANCE_MODIFIER = 0.4;
+
+	/**
+	 * See if we have scrolled far enough down the page to activate the equalizer, and if so, activate it.
+	 * @param {Ractive} ractive
+	 */
+	function activateEqualizerIfAtBreakpoint(ractive) {
+	    var lastKnownTopPosition = ractive.el.getBoundingClientRect().top;
+	    var heightOfThisElement = ractive.el.clientHeight;
+
+	    if (lastKnownTopPosition <= heightOfThisElement * PERCENT_OF_VIEW_TO_PEEK) {
+	        ractive.set('equalizerActive', true);
+	    } else {
+	        ractive.set('equalizerActive', false);
+	    }
+	}
+
+	/**
+	 * Move a given element down the y-axis by a given number of pixels.
+	 * @param {Element} element
+	 * @param {number} numPixels
+	 */
+	function shiftDown(element, numPixels) {
+	    element.style.transform = 'translateY(' + numPixels + 'px)';
+	}
 
 	var ractive = new _ractive2.default({
 	    el: '.sect2',
@@ -104,19 +129,14 @@
 	     * See if this section has scrolled into view and activate the equalizer if so.
 	     */
 	    onscroll: function onscroll(event) {
-	        var lastKnownTopPosition = this.el.getBoundingClientRect().top;
-	        var heightOfThisElement = this.el.clientHeight;
-	        var sect1El = document.querySelector('.sect1Background');
+	        var scrollTop = event.target.scrollingElement.scrollTop;
+	        var backgroundEl = document.querySelector('.sect1Background');
+	        var nameTitleEl = document.querySelector('.sect1');
 
 	        window.requestAnimationFrame(function () {
-	            var scrollTop = event.target.scrollingElement.scrollTop;
-	            sect1El.style.transform = 'translateY(' + scrollTop * DISTANCE_MODIFIER + 'px)';
-
-	            if (lastKnownTopPosition <= heightOfThisElement * PERCENT_OF_VIEW_TO_PEEK) {
-	                this.set('equalizerActive', true);
-	            } else {
-	                this.set('equalizerActive', false);
-	            }
+	            shiftDown(backgroundEl, scrollTop * BACKGROUND_DISTANCE_MODIFIER);
+	            shiftDown(nameTitleEl, scrollTop * NAME_TITLE_DISTANCE_MODIFIER);
+	            activateEqualizerIfAtBreakpoint(this);
 	        }.bind(this));
 	    }
 	});

@@ -11,73 +11,59 @@
     height: 100%;
     width: 100%;
 
-    .fullName {
+    .nameTitleContainer {
         @include horizontalCenter();
-        @include fadeIn(0.3s, 0.5s);
-        top: 35%;
-        font-size: 35px;
-        font-family: 'Ranga', cursive;
-        color: white;
-    }
-
-    .jobTitle {
-        @include horizontalCenter();
-        @include fadeIn(0.5s, 0.5s);
-        top: 43%;
-        font-size: 25px;
-        font-family: 'Ranga', cursive;
-        color: white;
-    }
-
-    .socialIconContainer {
-        width: 20%;
-        min-width: 275px;
+        width: 100%;
+        height: 500px;
         text-align: center;
-        @include verticalCenter();
-        @include horizontalCenter();
-        top: 65%;
+        top: 20%;
 
-        .social-icon {
-            margin-left: 5%;
-            margin-right: 5%;
+        .mugshot {
+            box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.3), 0 0 0 1px rgba(0, 0, 0, 0.2);
+            border-radius: 50%;
+            width: 125px;
+            opacity: 0.9;
+            @include fadeIn(0.8s, 0.5s);
+        }
 
-            &.github {
-                left: 30%;
-                @include fadeIn(1.0s, 0.5s);
-            }
+        .fullName {
+            @include fadeIn(0.3s, 0.5s);
+            font-size: 35px;
+            font-family: 'Special Elite', cursive;
+            color: white;
+        }
 
-            &.github-description {
-                left: 26.5%;
-                margin-top: 30%;
-                font-family: 'Pastel Crayon', serif;
-                font-size: 26px;
-                color: $pureWhite;
-            }
+        .jobTitle {
+            @include fadeIn(0.5s, 0.5s);
+            font-size: 25px;
+            font-family: 'Special Elite', cursive;
+            color: white;
+        }
 
-            &.linkedin {
-                left: 48%;
-                @include fadeIn(1.25s, 0.5s);
-            }
+        .socialIconContainer {
+            display: inline-block;
+            width: 20%;
+            min-width: 275px;
+            text-align: center;
 
-            &.linkedin-description {
-                left: 43.5%;
-                margin-top: 30%;
-                font-family: 'Pastel Crayon', serif;
-                font-size: 26px;
-                color: $pureWhite;
-            }
+            .social-icon {
+                margin-left: 5%;
+                margin-right: 5%;
 
-            &.twitter {
-                left: 67%;
-                @include fadeIn(1.5s, 0.5s);
-            }
+                &.github {
+                    left: 30%;
+                    @include fadeIn(1.0s, 0.5s);
+                }
 
-            &.twitter-description {
-                left: 63%;
-                margin-top: 30%;
-                font-family: 'Pastel Crayon', serif;
-                font-size: 26px;
-                color: $pureWhite;
+                &.linkedin {
+                    left: 48%;
+                    @include fadeIn(1.25s, 0.5s);
+                }
+
+                &.twitter {
+                    left: 67%;
+                    @include fadeIn(1.5s, 0.5s);
+                }
             }
         }
     }
