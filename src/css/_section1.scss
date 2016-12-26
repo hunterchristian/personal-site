@@ -1,16 +1,31 @@
-.sect1 {
+.sect1Background {
+    position: absolute;
     height: 100%;
     width: 100%;
     background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('assets/images/ireland.jpg');
     background-size: cover;
     background-position: right;
+}
+
+.sect1 {
+    height: 100%;
+    width: 100%;
+
+    .fullName {
+        @include horizontalCenter();
+        @include fadeIn(0.3s, 0.5s);
+        top: 35%;
+        font-size: 35px;
+        font-family: 'Ranga', cursive;
+        color: white;
+    }
 
     .jobTitle {
         @include horizontalCenter();
         @include fadeIn(0.5s, 0.5s);
-        top: 40%;
+        top: 43%;
+        font-size: 25px;
         font-family: 'Ranga', cursive;
-        font-size: 35px;
         color: white;
     }
 
@@ -20,6 +35,7 @@
         text-align: center;
         @include verticalCenter();
         @include horizontalCenter();
+        top: 65%;
 
         .social-icon {
             margin-left: 5%;
@@ -73,13 +89,18 @@
 
 @include respondTo(handhelds) {
     .sect1 {
+        .fullName {
+            top: 10%;
+            font-size: 95px;
+        }
+
         .jobTitle {
-            top: 15%;
-            font-size: 85px;
+            top: 20%;
+            font-size: 75px;
         }
 
         .socialIconContainer {
-            top: 27%;
+            top: 50%;
             width: 60%;
 
             .social-icon {

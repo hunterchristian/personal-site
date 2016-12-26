@@ -9,6 +9,7 @@ Ractive.components.equalizer = Equalizer;
 const SHOW_CONTENT_BELOW_FOLD_DELAY_MILLIS = 2500;
 // This constant needs to be kept in sync with the $sectionHeight variable in _utils.scss
 const PERCENT_OF_VIEW_TO_PEEK = 0.06;
+const DISTANCE_MODIFIER = 0.65;
 
 const ractive = new Ractive({
     el: '.sect2',
@@ -48,11 +49,15 @@ const ractive = new Ractive({
     /**
      * See if this section has scrolled into view and activate the equalizer if so.
      */
-    onscroll: function () {
+    onscroll: function (event) {
         const lastKnownTopPosition = this.el.getBoundingClientRect().top;
         const heightOfThisElement = this.el.clientHeight;
+        const sect1El = document.querySelector('.sect1Background');
 
         window.requestAnimationFrame(function () {
+            const scrollTop = event.target.scrollingElement.scrollTop;
+            sect1El.style.transform = 'translateY(' + scrollTop * DISTANCE_MODIFIER + 'px)';
+
             if (lastKnownTopPosition <= heightOfThisElement * PERCENT_OF_VIEW_TO_PEEK) {
                 this.set('equalizerActive', true);
             } else {
