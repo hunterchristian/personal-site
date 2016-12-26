@@ -3,6 +3,7 @@
 import 'babel-polyfill';
 import Ractive from 'ractive';
 import Equalizer from './components/Equalizer';
+import ReportUserInfo from './commands/ReportUserInfo';
 
 Ractive.components.equalizer = Equalizer;
 
@@ -22,8 +23,10 @@ function activateEqualizerIfAtBreakpoint (ractive) {
 
     if (lastKnownTopPosition <= heightOfThisElement * PERCENT_OF_VIEW_TO_PEEK) {
         ractive.set('equalizerActive', true);
+        document.querySelector('.nameTitleContainer').style.opacity = 0;
     } else {
         ractive.set('equalizerActive', false);
+        document.querySelector('.nameTitleContainer').style.opacity = 1;
     }
 }
 
@@ -62,6 +65,11 @@ const ractive = new Ractive({
         } else {
             this.el.classList.add('pageLoaded');
         }
+
+        const userInfo = {
+            pageLoadTime: Math.round(timeSinceFirstLoad)
+        };
+        new ReportUserInfo(userInfo).execute();
     },
 
     /**

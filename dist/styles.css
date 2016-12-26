@@ -29,7 +29,11 @@
     width: 100%;
     height: 500px;
     text-align: center;
-    top: 20%; }
+    top: 20%;
+    opacity: 1;
+    transition: opacity .25s ease-in-out;
+    -moz-transition: opacity .25s ease-in-out;
+    -webkit-transition: opacity .25s ease-in-out; }
     .sect1 .nameTitleContainer .mugshot {
       box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.3), 0 0 0 1px rgba(0, 0, 0, 0.2);
       border-radius: 50%;
